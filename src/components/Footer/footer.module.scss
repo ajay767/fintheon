@@ -1,0 +1,17 @@
+.footer {
+  background-color: #3f51b5;
+  color: #fff;
+  padding: 15px;
+  display: grid;
+  place-content: center;
+  margin: 55px auto 0;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & svg {
+    margin-right: 5px;
+  }
+}

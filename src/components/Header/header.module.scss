@@ -1,0 +1,43 @@
+.header {
+  padding: 15px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  @media screen and (max-width: '600px') {
+    justify-content: space-between;
+  }
+  & h5 {
+    font-weight: 600;
+  }
+
+  .left {
+    & img {
+      height: 45px;
+
+      @media screen and (max-width: '600px') {
+        height: 30px;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    & a {
+      text-decoration: none;
+      color: black;
+      margin-right: 25px;
+      padding: 5px 0;
+      &:hover {
+        border-bottom: 2px solid blue;
+      }
+
+      @media screen and (max-width: '600px') {
+        display: none;
+      }
+    }
+  }
+}
