@@ -14,10 +14,13 @@ body {
 
 .tile-btn {
   position: absolute;
-  top: -20px;
+  top: -30px;
   left: 35px;
-  padding: 5px 15px;
+  padding: 15px 25px;
   border-radius: 50px;
   width: max-content;
   background: #3f51b5;
+  & h5 {
+    font-weight: 600;
+  }
 }

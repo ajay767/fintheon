@@ -22,6 +22,7 @@ export default function Container({
   icon = null,
   style = null,
   bg = null,
+  blockStyle = null,
 }) {
   const classes = useStyle();
   const Icon = icon;
@@ -35,8 +36,10 @@ export default function Container({
           </span>
         </Typography>
       )}
-      <img src={bg} alt="background" />
-      <Block>{children}</Block>
+      {bg && <img src={bg} alt="background" />}
+      <div style={blockStyle}>
+        <Block>{children}</Block>
+      </div>
     </div>
   );
 }

@@ -24,6 +24,7 @@ const useStyle = makeStyles({
   },
   content: {
     color: '#7f7f7f',
+    // marginTop: '20px',
   },
 });
 function App() {
@@ -37,9 +38,12 @@ function App() {
           transform: 'translateY(-100px)',
         }}
         bg={bg}
+        blockStyle={{ marginTop: '30px' }}
       >
         <div className="tile-btn">
-          <Typography className={style.root}>Tata Motors pvt ltd</Typography>
+          <Typography variant="h5" className={style.root}>
+            Tata Motors pvt ltd
+          </Typography>
         </div>
         <Typography variant="subtitle1" className={style.content}>
           <span className={style.flex}>
@@ -60,7 +64,13 @@ function App() {
         </Typography>
       </Container>
 
-      <Container title="Bank Details" icon={AccountBalanceIcon}>
+      <Container
+        title="Bank Details"
+        icon={AccountBalanceIcon}
+        style={{
+          transform: 'translateY(-100px)',
+        }}
+      >
         <span className={style.flex}>
           <Typography variant="subtitle1">Accont number : </Typography>
           <Typography variant="subtitle2" className={style.content}>
