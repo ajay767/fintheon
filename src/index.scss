@@ -23,4 +23,11 @@ body {
   & h5 {
     font-weight: 600;
   }
+
+  @media screen and (max-width: '600px') {
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+  }
 }
