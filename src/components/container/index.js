@@ -1,11 +1,12 @@
 import React from 'react';
 import styles from './container.module.scss';
 import Block from './../block';
+import bank from './../../assets/bank.jpeg';
 import { makeStyles, Typography } from '@material-ui/core';
 
 const useStyle = makeStyles({
   root: {
-    margin: '10px auto',
+    margin: '10px auto 30px',
   },
   flex: {
     display: 'flex',
@@ -13,30 +14,34 @@ const useStyle = makeStyles({
     alignItems: 'center',
   },
   icon: {
-    marginRight: '10px',
+    marginRight: '20px',
+    height: '29px',
+    width: '29px',
   },
 });
 export default function Container({
   children,
   title = null,
-  icon = null,
+  icon = false,
   style = null,
   bg = null,
   blockStyle = null,
 }) {
   const classes = useStyle();
-  const Icon = icon;
+
   return (
     <div className={styles.container} style={style}>
       {title && (
         <Typography className={classes.root} variant="h5">
           <span className={classes.flex}>
-            {icon && <Icon className={classes.icon} />}
+            {icon && <img alt="bank" src={bank} className={classes.icon} />}
             {title}
           </span>
         </Typography>
       )}
-      {bg && <img src={bg} alt="background" />}
+      {bg && (
+        <img className={styles.container__img} src={bg} alt="background" />
+      )}
       <div style={blockStyle}>
         <Block>{children}</Block>
       </div>

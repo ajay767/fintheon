@@ -1,13 +1,24 @@
-import { Button, Typography } from '@material-ui/core';
+import { Button, makeStyles, Typography } from '@material-ui/core';
 import React from 'react';
 import styles from './header.module.scss';
 import logo from './../../assets/logo.png';
+import square from './../../assets/square.jpeg';
 
-export default function index() {
+const useStyle = makeStyles({
+  root: {
+    textTransform: 'none',
+    fontFamily: ['Open Sans', 'sans-serif'],
+    fontWeight: 'bold',
+    zIndex: '10',
+  },
+});
+
+export default function Header() {
+  const classes = useStyle();
+
   return (
     <header className={styles.header}>
       <div className={styles.left}>
-        {/* <Typography variant="h5">Fitheon</Typography> */}
         <img src={logo} alt="logo" />
       </div>
       <div className={styles.right}>
@@ -17,10 +28,16 @@ export default function index() {
         <a href="#4">
           <Typography variant="subtitle2">Transaction</Typography>
         </a>
-        <Button variant="contained" color="primary" disableRipple>
+        <Button
+          className={classes.root}
+          variant="contained"
+          color="primary"
+          disableRipple
+        >
           Logout
         </Button>
       </div>
+      <img className={styles.headerImg} alt="header" src={square} />
     </header>
   );
 }

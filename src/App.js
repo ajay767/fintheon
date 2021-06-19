@@ -5,8 +5,7 @@ import { makeStyles, Typography, Grid } from '@material-ui/core';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import PhoneIcon from '@material-ui/icons/Phone';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
-import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
-import bg from './assets/map.svg';
+import bg from './assets/map.jpeg';
 
 const useStyle = makeStyles({
   root: {
@@ -24,7 +23,6 @@ const useStyle = makeStyles({
   },
   content: {
     color: '#7f7f7f',
-    // marginTop: '20px',
   },
 });
 function App() {
@@ -54,7 +52,10 @@ function App() {
         <Typography variant="subtitle1" className={style.content}>
           <span className={style.flex}>
             <MailOutlineIcon fontSize="small" className={style.icons} />
-            tatamotorchd@gmail.com |
+            <span style={{ textDecoration: 'underline', marginRight: '5px' }}>
+              tatamotorchd@gmail.com
+            </span>
+            |
             <PhoneIcon fontSize="small" className={style.icons} /> +91
             7878855747, +91 9875886945
           </span>
@@ -66,43 +67,43 @@ function App() {
 
       <Container
         title="Bank Details"
-        icon={AccountBalanceIcon}
+        icon={true}
         style={{
           transform: 'translateY(-100px)',
         }}
       >
         <Grid container className={style.flex}>
-          <Grid item xs={6} lg={3}>
-            <Typography variant="subtitle1">Accont number</Typography>
+          <Grid item xs={6} lg={2}>
+            <Typography variant="subtitle1">Accont Number</Typography>
           </Grid>
-          <Grid item xs={6} lg={9}>
+          <Grid item xs={6} lg={10}>
             <Typography variant="subtitle2" className={style.content}>
               : 10230062781253
             </Typography>
           </Grid>
 
-          <Grid item xs={6} lg={3}>
+          <Grid item xs={6} lg={2}>
             <Typography variant="subtitle1">Bank Name</Typography>
           </Grid>
-          <Grid item xs={6} lg={9}>
+          <Grid item xs={6} lg={10}>
             <Typography variant="subtitle2" className={style.content}>
               : State Bank of India (SBI)
             </Typography>
           </Grid>
 
-          <Grid item xs={6} lg={3}>
-            <Typography variant="subtitle1">IFSC code</Typography>
+          <Grid item xs={6} lg={2}>
+            <Typography variant="subtitle1">IFSC Code</Typography>
           </Grid>
-          <Grid item xs={6} lg={9}>
+          <Grid item xs={6} lg={10}>
             <Typography variant="subtitle2" className={style.content}>
               : SBI789548
             </Typography>
           </Grid>
 
-          <Grid item xs={6} lg={3}>
+          <Grid item xs={6} lg={2}>
             <Typography variant="subtitle1">Bank Address</Typography>
           </Grid>
-          <Grid item xs={6} lg={9}>
+          <Grid item xs={6} lg={10}>
             <Typography variant="subtitle2" className={style.content}>
               : Quite office 17,sec-40 chandigarh
             </Typography>

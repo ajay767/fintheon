@@ -1,9 +1,11 @@
 .header {
+  position: relative;
   padding: 15px;
   background-color: #fff;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  overflow: hidden;
   @media screen and (max-width: '600px') {
     justify-content: space-between;
   }
@@ -40,4 +42,12 @@
       }
     }
   }
+}
+
+.headerImg {
+  transform: rotate(103deg) scale(0.8);
+  position: absolute;
+  right: -89px;
+  top: -65px;
+  filter: grayscale(1);
 }
